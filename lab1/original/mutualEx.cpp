@@ -35,13 +35,13 @@ int main(void){
   int i=0;
   for(std::thread& t: vt) { 
     t=std::thread(updateTask,aSemaphore,1000);
-    i++;
     if(i == (num_threads - 1)) {
 	// The last thread has been reached
 	// This will signal one thread to start, which will then signal
 	// the other threads in an almost recursive fashion
 	aSemaphore->Signal();
     }
+    i++;
   }	    
   std::cout << "Launched from the main\n";
   /**< Join the threads with the main thread */
