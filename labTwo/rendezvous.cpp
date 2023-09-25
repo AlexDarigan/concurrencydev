@@ -9,6 +9,7 @@ void task(std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrier
   mutexSem->Wait();     	
   std::cout << "first" << std::endl;
   mutexSem->Signal();
+
   static int barrier;
   barrier++;
   if(barrier < threadCount) {
@@ -16,6 +17,7 @@ void task(std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrier
   }
   barrier = 0;
   barrierSem->Signal();
+  
   mutexSem->Wait();
   std::cout << "second" << std::endl;
   mutexSem->Signal();
