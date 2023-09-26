@@ -1,10 +1,24 @@
-The README file is a text file that explains what a project is.
-It should contain information on
+## Lab Two
 
-1. Project Licence
-2. Authors of Project
-3. How to install project
-4. List of any required Libraries, platform issues, etc.
-5. TO DO section listing items that need to be completed (errors, missing features etc.)
-6. List of files and what they contain
-7. Any other relevent information
+A lab on N-Barrier Rendevouz Semaphores
+
+## Author
+
+David Darigan
+C00263218@setu.ie
+[https://www.linkedin.com/in/daviddarigan/](https://www.linkedin.com/in/daviddarigan/)
+
+## Prerequisites
+
+GCC
+Make
+Any Text Editor
+
+## Install
+
+1. Run Make
+2. Run resulting executable
+
+## License
+
+GPL-3.0
