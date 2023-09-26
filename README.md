@@ -16,4 +16,4 @@ Any Text Editor
 
 ## License
 
-?
+GPL-3.0
