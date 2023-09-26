@@ -5,8 +5,10 @@ A lab on N-Barrier Rendevouz Semaphores
 ## Author
 
 David Darigan
+
 C00263218@setu.ie
-https://www.linkedin.com/in/daviddarigan/
+
+[Linkedin](https://www.linkedin.com/in/daviddarigan/)
 
 ## Prerequisites
 
