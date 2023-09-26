@@ -1,3 +1,5 @@
+// Author: David Darigan
+
 #include "Semaphore.h"
 #include <iostream>
 #include <thread>
