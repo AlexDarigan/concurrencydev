@@ -1,6 +1,6 @@
-## Lab Two
+## Lab Three - Barrier
 
-A lab on N-Barrier Rendevouz Semaphores
+A lab on mutual exclusion
 
 ## Author
 
@@ -16,14 +16,9 @@ GCC
 Make
 Any Text Editor
 
-## Install
-
-1. Run Make
-2. Run resulting executable
-
 ## License
 
-                        GNU GENERAL PUBLIC LICENSE
+     GNU GENERAL PUBLIC LICENSE
                         Version 3, 29 June 2007
 
     Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -697,4 +692,3 @@ Any Text Editor
     the library.  If this is what you want to do, use the GNU Lesser General
     Public License instead of this License.  But first, please read
     <https://www.gnu.org/licenses/why-not-lgpl.html>.
-
