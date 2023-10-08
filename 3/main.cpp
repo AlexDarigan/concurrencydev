@@ -1,3 +1,5 @@
+// Author: David Darigan
+
 #include "Barrier.h"
 #include <thread>
 #include <vector>
