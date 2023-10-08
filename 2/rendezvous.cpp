@@ -8,14 +8,17 @@
 /*! displays the first function in the barrier being executed */
 void task(std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrierSem, std::shared_ptr<int> threadCount){
 
+  // We lock early to prevent writing issues
   mutexSem->Wait();     	
   std::cout << "first" << std::endl;
-  mutexSem->Signal();
-
+  
   (*threadCount)--;
   if((*threadCount) > 0) {
+	  // We release inside of the loop so we avoid threadcount being manipulated while being read from
+  	  mutexSem->Signal();
 	  barrierSem->Wait();
   }
+  mutexSem->Signal();
   barrierSem->Signal();
   
   mutexSem->Wait();
