@@ -1,20 +1,21 @@
-CC=g++
-CFLAGS= -std=c++11 -pthread
-TEST_LIB=/tests/libgtest.a
+# Author: David Darigan (C00263218)
 
+CC=g++
+CFLAGS=-std=c++11 -pthread
+HELLO_FILES=helloThreads.o Semaphore.o
+MUTUAL_FILES=mutualEx.o Semaphore.o
+
+# Inform make that .o files require .cpp files of the same name
 %.o: %.cpp
 	$(CC) -c -o $@ $< $(CFLAGS) $(DEBUGFLAGS)
 
-HELLO: helloThreads.o Semaphore.o
-	$(CC) -o helloThreads helloThreads.o Semaphore.o $(CFLAGS) $(DEBUGFLAGS)
-	
-MUTUAL: mutualEx.o Semaphore.o
-	$(CC) -o mutualEx mutualEx.o Semaphore.o $(CFLAGS) $(DEBUGFLAGS)
+RELEASE: $(HELLO_FILES) $(MUTUAL_FILES)
+	$(CC) -o helloThreads $(HELLO_FILES) $(CFLAGS) $(DEBUGFLAGS)
+	$(CC) -o mutualEx $(MUTUAL_FILES) $(CFLAGS) $(DEBUGFLAGS)
 
-TEST: $(TEST_LIB)
-	$(CC) -o example $(TEST_LIB) $(CFLAGS)
-
+# Set Debug Flags & Build Debug Build
 DEBUG: DEBUGFLAGS = -DDEBUG
 
+# Remove used .o files that are no longer needed
 CLEAN:
 	rm *.o
