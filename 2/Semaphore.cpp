@@ -33,3 +33,8 @@ void Semaphore::Signal()
       ++m_uiCount;
       m_condition.notify_one();
 }
+
+// ReadOnly getter for testing purposes only
+int Semaphore::getCount() {
+      return m_uiCount;
+}
