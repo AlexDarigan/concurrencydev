@@ -1,16 +1,25 @@
-#Joseph Kehoe 13/9/2017
-#First simple Makefile
-#Used to contain commands to compile projects
-#Equivalent(?) to a project file in VStudio -- only better!
-#See http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/ for info.
-
+# Author	: David Darigan (C00263218)
+# Licence	: GPL-3.0 (See LICENSE text for the full LICENSE)
+# Git URL	: https://github.com/AlexDarigan/concurrencydev 
 
 CC=g++
-CFLAGS= -std=c++11 -pthread
+CFLAGS= -std=c++11 -pthread -Wall
+RENDEZ_FILES=rendezvous.o Semaphore.o Semaphore.h
 
-SIMPLE: rendezvous.cpp Semaphore.cpp Semaphore.h
-	g++ -std=c++11 -pthread rendezvous.cpp Semaphore.cpp Semaphore.h
+# Inform make that .o files require .cpp files of the same name
+%.o: %.cpp
+	$(CC) -c -o $@ $< $(CFLAGS) $(DEBUGFLAGS)
 
+# Our main build rule
+RELEASE: $(RENDEZ_FILES)
+	$(CC) -o rendezvous $(RENDEZ_FILES) $(CFLAGS) $(DEBUGFLAGS)
 
+# Set Debug Flags & Build Debug Build
+DEBUG: DEBUGFLAGS = -DDEBUG
+
+# Call RELEASE rule with the Debug Flags as the second step of the debug rule
+DEBUG: RELEASE
+
+# Remove used .o files that are no longer needed
 CLEAN:
 	rm *.o

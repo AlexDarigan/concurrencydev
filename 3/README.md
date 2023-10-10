@@ -1,10 +1,16 @@
 ## Lab 3 - N Barrier
 
-A lab on handling multiple threads
+The code here demonstrates a similair pattern to that of Lab 2 through the use of an entry and exit gate. This version is intended to work in a loop unlike Lab 2 (Rendezvous) which does not.
+
+## Github Repository 
+
+[www.github.com/AlexDarigan/concurrencydev](Github Repository)
 
 ## License
 
 GPL-3.0
+
+See LICENSE for full license text.
 
 ## Author
 

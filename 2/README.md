@@ -1,10 +1,17 @@
 ## Lab 2 - Rendezvous
 
-A lab on thread rendezvous
+The code in this project demonstrates a rendezvous barrier which is a concurrency design pattern that waits for a number of threads reaching a point in
+the execution flow before allowing any of them to execute. 
+
+## Github Repository 
+
+[www.github.com/AlexDarigan/concurrencydev](Github Repository)
 
 ## License
 
 GPL-3.0
+
+See [LICENSE](LICENSE) for full license text.
 
 ## Author
 
