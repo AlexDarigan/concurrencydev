@@ -37,10 +37,6 @@ void task(std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrier
     barrierSem->Wait();
     barrierSem->Signal();
     std::cout << "second " << std::endl;
-    if(barrier_signaled) {
-      barrierSem->Wait();
-    }
-
 }
 
 
