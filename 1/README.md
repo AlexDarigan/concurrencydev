@@ -7,13 +7,13 @@ variable will always be the same regardless of which thread touched it when.
 
 ## Github Repository 
 
-[www.github.com/AlexDarigan/concurrencydev](Github Repository)
+[Github Repository](www.github.com/AlexDarigan/concurrencydev)
 
 ## License
 
 GPL-3.0
 
-See LICENSE for full license text.
+See [LICENSE](LICENSE) for full license text.
 
 ## Author
 

@@ -4,13 +4,13 @@ The code here demonstrates a similair pattern to that of Lab 2 through the use o
 
 ## Github Repository 
 
-[www.github.com/AlexDarigan/concurrencydev](Github Repository)
+[Github Repository](www.github.com/AlexDarigan/concurrencydev)
 
 ## License
 
 GPL-3.0
 
-See LICENSE for full license text.
+See [LICENSE](LICENSE) for full license text.
 
 ## Author
 
