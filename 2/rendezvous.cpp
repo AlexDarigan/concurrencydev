@@ -24,24 +24,22 @@ void task(std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrier
     std::cout << "first " << std::endl;
     //put barrier code here
     mutexSem->Wait(); // 1,2,3,4,5
+    bool barrier_signaled = false;
     --(*threadCount);
     std::cout << (*threadCount);
-    if((*threadCount) > 0) { // mutex is 0 here
-      mutexSem->Signal(); // Signal for next thread to decrement count
-      barrierSem->Wait();
+    if((*threadCount) == 0) { // mutex is 0 here
+        barrierSem->Signal();
+        barrier_signaled = true;
     } else { 
-      mutexSem->Signal();      
+   
     }
-    //barrierSem->Wait();
+    mutexSem->Signal();
+    barrierSem->Wait();
     barrierSem->Signal();
-    // if((*threadCount) > 0) {
-    //   barrierSem->Signal();
-    // }
-    //barrierSem->Signal();
-    
-    //barrierSem->Wait();
-    
     std::cout << "second " << std::endl;
+    if(barrier_signaled) {
+      barrierSem->Wait();
+    }
 
 }
 
