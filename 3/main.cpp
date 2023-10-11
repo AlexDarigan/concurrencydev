@@ -26,7 +26,22 @@ void task(std::shared_ptr<Barrier> barrierObj){
   }
 }
 
+void testSemaphoreCounts() {
+  std::vector<std::thread> threadArray(5);
+  std::shared_ptr<Barrier> barrierObj( new Barrier(5));
 
+  for(int i=0; i < threadArray.size(); i++){
+    threadArray[i]=std::thread(task,barrierObj);
+  }
+
+  for(int i = 0; i < threadArray.size(); i++){
+    threadArray[i].join();
+  }
+  
+  isEqual(1, barrierObj->getMutexCount(), "Mutex returned to original count");
+  isEqual(0, barrierObj->getEntryCount(), "Entry gate returned to original count");
+  isEqual(1, barrierObj->getExitCount(), "Exit gate returned to original count");
+}
 
 
 int main(void){
@@ -44,5 +59,6 @@ int main(void){
     threadArray[i].join();
   }
   
+  testSemaphoreCounts();
   return 0;
 }
