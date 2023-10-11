@@ -49,7 +49,7 @@ int Barrier::getEntryCount() {
 }
 
 int Barrier::getExitCount() {
-  return entry->getCount();
+  return exit->getCount();
 }
 
 /*! waits for all the threads before starting second half of code*/ 
@@ -59,8 +59,8 @@ void Barrier::waitForAll(){
   threadNum++;
 
   if(threadNum == count){
-    exit->Wait();
-    entry->Signal();
+    exit->Wait(); // 0
+    entry->Signal(); // 1
   }
   mutex->Signal();
   entry->Wait();
@@ -68,8 +68,8 @@ void Barrier::waitForAll(){
   mutex->Wait();
   threadNum--;
   if(threadNum == 0) {
-    entry->Wait();
-    exit->Signal();
+    entry->Wait(); // -count
+    exit->Signal(); // 1
   }
   mutex->Signal();
   exit->Wait();
