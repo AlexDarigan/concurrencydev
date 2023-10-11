@@ -4,7 +4,7 @@
 
 CC=g++
 CFLAGS= -std=c++11 -pthread -I -Wall
-BARRIER_FILES=Semaphore.o Barrier.o main.o
+BARRIER_FILES=main.o Semaphore.o Barrier.o
 
 # Inform make that .o files require .cpp files of the same name
 %.o: %.cpp
@@ -12,7 +12,7 @@ BARRIER_FILES=Semaphore.o Barrier.o main.o
 
 # Our main build rule
 RELEASE: $(BARRIER_FILES)
-	$(CC) -o barrier $(BARRIER_FILES) $(CFLAGS) $(DEBUGFLAGS)
+	$(CC) -o main $(BARRIER_FILES) $(CFLAGS) $(DEBUGFLAGS)
 
 # Set Debug Flags & Build Debug Build
 DEBUG: DEBUGFLAGS = -g -O0
