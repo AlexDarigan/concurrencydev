@@ -40,6 +40,18 @@ int Barrier::getCount(){
   return this->count;
 }
 
+int Barrier::getMutexCount() {
+  return mutex->getCount();
+}
+
+int Barrier::getEntryCount() {
+  return entry->getCount();
+}
+
+int Barrier::getExitCount() {
+  return entry->getCount();
+}
+
 /*! waits for all the threads before starting second half of code*/ 
 void Barrier::waitForAll(){
 

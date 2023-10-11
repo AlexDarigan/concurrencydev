@@ -28,5 +28,8 @@ public:
   ~Barrier();
   Barrier(int count);
   int getCount();
+  int getMutexCount();
+  int getEntryCount();
+  int getExitCount();
   void waitForAll();
 };

@@ -19,5 +19,6 @@ public:
       : m_uiCount(uiCount) { };
     void Wait();
     void Signal();
+    int getCount();
 
 };

@@ -23,3 +23,7 @@ void Semaphore::Signal()
       ++m_uiCount;
       m_condition.notify_one();
 }
+
+int Semaphore::getCount() {
+      return m_uiCount;
+}
