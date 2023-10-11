@@ -17,25 +17,35 @@ void isEqual(A expected, B actual, std::string context) {
         }
 }
 
+bool set_once = false;
+int arrived = 0;
+int left = 0;
 
 /*! displays the first function in the barrier being executed */
 void task(std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrierSem, std::shared_ptr<int> threadCount){
 
     std::cout << "first " << std::endl;
     //put barrier code here
-    mutexSem->Wait(); // 1,2,3,4,5
-    bool barrier_signaled = false;
+    mutexSem->Wait();
+    ++arrived;
     --(*threadCount);
-    std::cout << (*threadCount);
-    if((*threadCount) == 0) { // mutex is 0 here
+    if((*threadCount) == 0) {
         barrierSem->Signal();
         barrier_signaled = true;
-    } else { 
-   
     }
     mutexSem->Signal();
     barrierSem->Wait();
-    barrierSem->Signal();
+    mutexSem->Wait();
+    ++left;
+    std::cout << arrived;
+    if(left < arrived) {
+      barrierSem->Signal();
+    } else {
+      // Clearing for the next run
+      arrived = 0;
+      left = 0;
+    }
+    mutexSem->Signal();
     std::cout << "second " << std::endl;
 }
 
