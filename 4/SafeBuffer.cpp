@@ -6,10 +6,12 @@ template <typename T>
 SafeBuffer<T>::SafeBuffer(int size) {
     mutex = std::make_shared<Semaphore>(1);
     items = std::make_shared<Semaphore>(0);
+    spaces = std::make_shared<Semaphore>(size);
 }
 
 template <typename T>
 void SafeBuffer<T>::put(T element) {
+    spaces->Wait();
     mutex->Wait();
     queue.push(element);
     mutex->Signal();
@@ -23,6 +25,7 @@ T SafeBuffer<T>::get() {
     queue.pop();
     items->Wait();
     mutex->Signal();
+    spaces->Signal();
     return element;
 }
 

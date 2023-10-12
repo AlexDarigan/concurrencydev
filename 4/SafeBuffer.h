@@ -11,6 +11,7 @@ class SafeBuffer {
     private:
         std::shared_ptr<Semaphore> mutex;
         std::shared_ptr<Semaphore> items;
+        std::shared_ptr<Semaphore> spaces;
         std::queue<T> queue;
         T placeholder;
 

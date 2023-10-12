@@ -9,6 +9,8 @@ static const int num_threads = 10;
 const int size=20;
 int sharedVariable = 0;
 
+
+
 /*! \fn producer
     \brief Creates events and adds them to buffer
 */
@@ -36,9 +38,14 @@ void consumer(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> theBuffer, int
   }
 }
 
-void updateTask(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> theBuffer, int count) {
-  producer(theBuffer, count);
-  consumer(theBuffer, count);
+// void updateTask(std::shared_ptr<Barrier> aBarrier, int loops) {
+//   producer(buffer, loops);
+//   consumer(buffer, loops);
+// }
+
+void updateTask(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> buffer, int loops) {
+  producer(buffer, loops);
+  consumer(buffer, loops);
 }
 
 int main(void){
@@ -53,7 +60,8 @@ int main(void){
   /**< Launch the threads  */
   int i=0;
   for(std::thread& t: vt){
-    t=std::thread(updateTask,aBuffer,10);
+    //t=std::thread(updateTask,aBarrier,10);
+    t=std::thread(updateTask, aBuffer, 10);
   }
   /**< Join the threads with the main thread */
   for (auto& v :vt){
