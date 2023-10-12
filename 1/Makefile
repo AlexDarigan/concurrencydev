@@ -5,7 +5,7 @@
 CC=g++
 CFLAGS=-std=c++11 -pthread -Wall
 HELLO_FILES=helloThreads.o Semaphore.o
-MUTUAL_FILES=mutualEx.o Semaphore.o
+MUTUAL_FILES=mutualEx.o Semaphore.o Semaphore.h
 
 # Inform make that .o files require .cpp files of the same name
 %.o: %.cpp

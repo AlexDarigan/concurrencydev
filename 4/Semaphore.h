@@ -22,6 +22,7 @@ public:
     Semaphore(unsigned int uiCount=0)
           : m_uiCount(uiCount) { };
     void Wait();
+    int getCount();
     template< typename R,typename P >
     bool Wait(const std::chrono::duration<R,P>& crRelTime);
     void Signal();

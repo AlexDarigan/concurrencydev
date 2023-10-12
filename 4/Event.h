@@ -44,6 +44,21 @@
 
 /* Code: */
 
+#ifndef EVENT_H
+#define EVENT_H 
 
+class Event {
+    private:
+        char lowercase;
+        char uppercase;
+
+    public:
+        Event(char alpha = 'a');
+        void Process();
+        char getUpper();
+
+}
+
+#endif
 
 /* Event.h ends here */

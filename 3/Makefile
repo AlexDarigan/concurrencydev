@@ -4,7 +4,7 @@
 
 CC=g++
 CFLAGS= -std=c++11 -pthread -I -Wall
-BARRIER_FILES=main.o Semaphore.o Barrier.o
+BARRIER_FILES=main.o Semaphore.o Barrier.o Semaphore.h Barrier.h
 
 # Inform make that .o files require .cpp files of the same name
 %.o: %.cpp

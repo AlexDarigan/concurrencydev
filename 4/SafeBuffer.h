@@ -44,6 +44,13 @@
 
 /* Code: */
 
+#ifndef SAFE_BUFFER_H
+#define SAFE_BUFFER_H
 
+class SafeBuffer {
+
+}
+
+#endif
 
 /* SafeBuffer.h ends here */

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <thread>
 #include <vector>
-
+#include "SafeBuffer.h"
 
 static const int num_threads = 100;
 const int size=20;

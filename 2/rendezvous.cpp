@@ -31,7 +31,6 @@ void task(std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrier
     --(*threadCount);
     if((*threadCount) == 0) {
         barrierSem->Signal();
-        barrier_signaled = true;
     }
     mutexSem->Signal();
     barrierSem->Wait();

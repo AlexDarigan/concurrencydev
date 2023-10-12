@@ -4,7 +4,7 @@
 
 CC=g++
 CFLAGS= -std=c++11 -pthread -I -Wall
-BUFFER_FILES=main.cpp 
+BUFFER_FILES=main.o Event.o Semaphore.o Barrier.o
 
 # Inform make that .o files require .cpp files of the same name
 %.o: %.cpp
