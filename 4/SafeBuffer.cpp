@@ -19,12 +19,11 @@ void SafeBuffer<T>::put(T element) {
 template <typename T>
 T SafeBuffer<T>::get() {
     mutex->Wait();
-    // get item
     T element = queue.front();
     queue.pop();
     items->Wait();
     mutex->Signal();
-    return placeholder;
+    return element;
 }
 
 // I hate this

@@ -1,13 +1,9 @@
 #include "Event.h"
 
-Event::Event(char alpha) {
-    lowercase = alpha;
+Event::Event(int num) {
+    number = num;
 }
 
-void Event::consume() {
-    uppercase = lowercase - 32;
-}
-
-char Event::getUpper() {
-    return uppercase;
+int Event::consume() {
+    return number;
 }

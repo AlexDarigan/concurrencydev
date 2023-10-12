@@ -49,13 +49,12 @@
 
 class Event {
     private:
-        char lowercase;
-        char uppercase;
+        int number;
 
     public:
-        Event(char alpha = 'a');
-        void consume();
-        char getUpper();
+        Event(int num);
+        int consume();
+        
 
 };
 

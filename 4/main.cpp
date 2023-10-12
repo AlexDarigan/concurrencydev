@@ -5,7 +5,7 @@
 #include <thread>
 #include <vector>
 
-static const int num_threads = 100;
+static const int num_threads = 10;
 const int size=20;
 int sharedVariable = 0;
 
@@ -14,7 +14,6 @@ int sharedVariable = 0;
 */
 
 void producer(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> theBuffer, int numLoops){
-
   for(int i=0;i<numLoops;++i){
     //Produce event and add to buffer
     std::shared_ptr<Event> e = std::make_shared<Event>(i);
@@ -31,12 +30,15 @@ void consumer(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> theBuffer, int
   for(int i=0;i<numLoops;++i){
     //Produce event and add to buffer
     std::shared_ptr<Event> e = theBuffer->get();
-    e->consume();
+    int num = e->consume();
+    std::cout << num << std::endl;
+    sharedVariable += num;
   }
 }
 
-void updateTask(std::shared_ptr<Barrier> barrier, int count) {
-
+void updateTask(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> theBuffer, int count) {
+  producer(theBuffer, count);
+  consumer(theBuffer, count);
 }
 
 int main(void){
@@ -51,12 +53,12 @@ int main(void){
   /**< Launch the threads  */
   int i=0;
   for(std::thread& t: vt){
-    t=std::thread(updateTask,aBarrier,10);
+    t=std::thread(updateTask,aBuffer,10);
   }
   /**< Join the threads with the main thread */
   for (auto& v :vt){
       v.join();
-  }
+   }
   std::cout << sharedVariable << std::endl;
   return 0;
 }
