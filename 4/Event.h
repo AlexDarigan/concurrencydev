@@ -54,10 +54,10 @@ class Event {
 
     public:
         Event(char alpha = 'a');
-        void Process();
+        void consume();
         char getUpper();
 
-}
+};
 
 #endif
 

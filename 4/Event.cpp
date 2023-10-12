@@ -4,7 +4,7 @@ Event::Event(char alpha) {
     lowercase = alpha;
 }
 
-void Event::Process() {
+void Event::consume() {
     uppercase = lowercase - 32;
 }
 

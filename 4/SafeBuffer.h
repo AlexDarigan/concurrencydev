@@ -44,13 +44,25 @@
 
 /* Code: */
 
-#ifndef SAFE_BUFFER_H
-#define SAFE_BUFFER_H
+#ifndef SAFEBUFFER_H
+#define SAFEBUFFER_H
 
+template <typename T>
 class SafeBuffer {
+    private:
+        T placeholder;
 
-}
+    public:
+        SafeBuffer(int size);
+        void put(T item);
+        T get();
+};
+
+
 
 #endif
+
+
+
 
 /* SafeBuffer.h ends here */
