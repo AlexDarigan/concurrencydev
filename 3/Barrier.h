@@ -27,9 +27,16 @@ public:
   Barrier();
   ~Barrier();
   Barrier(int count);
+  void waitForAll();
+
+/// @cond DO_NOT_DOCUMENT
+
+  // These are only here as read only methods used in testing, so we're excluding them from documentation
+
   int getCount();
   int getMutexCount();
   int getEntryCount();
   int getExitCount();
-  void waitForAll();
+
+/// @endcond
 };

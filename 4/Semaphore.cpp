@@ -1,13 +1,7 @@
+/// @cond DO_NOT_DOCUMENT
+// (We are copy-pasting this file so I've excluded this to prevent it appearing 8 times in doxygen)
+
 #include "Semaphore.h"
-/*! \class Semaphore
-    \brief A Semaphore Implementation
-
-   Uses C++11 features such as mutex and condition variables to implement Semaphore
-
-*/
-
-
-
 
 void Semaphore::Wait()
 {
@@ -37,3 +31,5 @@ void Semaphore::Signal()
 int Semaphore::getCount() {
       return m_uiCount;
 }
+
+/// @endcond

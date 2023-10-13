@@ -1,15 +1,11 @@
+/// @cond DO_NOT_DOCUMENT
+
 // Author: David Darigan
 
 #include "Semaphore.h"
 #include <iostream>
 #include <stdio.h>
 
-/*! \class Barrier
-    \brief A Barrier Implementation
-
-   Uses C++11 features such as mutex and condition variables to implement a Barrier class using Semaphores
-
-*/
 class Barrier
 {
 private:
@@ -33,3 +29,5 @@ public:
   int getExitCount();
   void waitForAll();
 };
+
+/// @endcond

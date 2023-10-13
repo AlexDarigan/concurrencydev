@@ -1,20 +1,17 @@
+/// @cond DO_NOT_DOCUMENT
+// (We are copy-pasting this file so I've excluded this to prevent it appearing 8 times in doxygen)
+
+
 #ifndef SEMAPHORE_H
 #define SEMAPHORE_H 
 #include <mutex>
 #include <condition_variable>
 #include <chrono>
-/*! \class Semaphore
-    \brief A Semaphore Implementation
-
-   Uses C++11 features such as mutex and condition variables to implement Semaphore
-
-*/
-
 
 class Semaphore
 {
 private:
-    unsigned int m_uiCount; /*!< Holds the Semaphore count */
+    unsigned int m_uiCount;
     std::mutex m_mutex;
     std::condition_variable m_condition;
 
@@ -30,3 +27,5 @@ public:
 };
 
 #endif
+
+/// @endcond

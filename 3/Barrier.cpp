@@ -19,6 +19,7 @@ Barrier::Barrier(){
   exit = std::make_shared<Semaphore>(1);
 
 }
+
 /*! Barrier with parameter constructor*/
 Barrier::Barrier(int count){
 
@@ -34,23 +35,6 @@ Barrier::~Barrier(){
 
 }
 
-/*! returns count value*/
-int Barrier::getCount(){
-
-  return this->count;
-}
-
-int Barrier::getMutexCount() {
-  return mutex->getCount();
-}
-
-int Barrier::getEntryCount() {
-  return entry->getCount();
-}
-
-int Barrier::getExitCount() {
-  return exit->getCount();
-}
 
 /*! waits for all the threads before starting second half of code*/ 
 void Barrier::waitForAll(){
@@ -75,3 +59,26 @@ void Barrier::waitForAll(){
   exit->Wait();
   exit->Signal();
 }
+
+
+/// @cond DO_NOT_DOCUMENT
+  // readonly test-use methods
+
+int Barrier::getCount(){
+
+  return this->count;
+}
+
+int Barrier::getMutexCount() {
+  return mutex->getCount();
+}
+
+int Barrier::getEntryCount() {
+  return entry->getCount();
+}
+
+int Barrier::getExitCount() {
+  return exit->getCount();
+}
+
+/// @endcond

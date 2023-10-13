@@ -1,0 +1,67 @@
+\hypertarget{classSafeBuffer}{}\doxysection{Safe\+Buffer$<$ T $>$ Class Template Reference}
+\label{classSafeBuffer}\index{SafeBuffer$<$ T $>$@{SafeBuffer$<$ T $>$}}
+
+
+A threadsafe buffer implementation.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSafeBuffer_a06e2a9f4127eb2caf672005575a1b6cc}{Safe\+Buffer}} (int size)
+\item 
+void \mbox{\hyperlink{classSafeBuffer_abcc6bddc8f887a743d24361132264c17}{put}} (T item)
+\item 
+\mbox{\Hypertarget{classSafeBuffer_afdba533e3a5ce1d4e75be05bf6410c96}\label{classSafeBuffer_afdba533e3a5ce1d4e75be05bf6410c96}} 
+T {\bfseries get} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Safe\+Buffer$<$ T $>$}
+
+A threadsafe buffer implementation. 
+
+Uses two mutexes to prevent race conditions when adding or removing from the internal buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSafeBuffer_a06e2a9f4127eb2caf672005575a1b6cc}\label{classSafeBuffer_a06e2a9f4127eb2caf672005575a1b6cc}} 
+\index{SafeBuffer$<$ T $>$@{SafeBuffer$<$ T $>$}!SafeBuffer@{SafeBuffer}}
+\index{SafeBuffer@{SafeBuffer}!SafeBuffer$<$ T $>$@{SafeBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SafeBuffer()}{SafeBuffer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}}$<$ T $>$\+::\mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}} (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The internal buffer capacity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSafeBuffer_abcc6bddc8f887a743d24361132264c17}\label{classSafeBuffer_abcc6bddc8f887a743d24361132264c17}} 
+\index{SafeBuffer$<$ T $>$@{SafeBuffer$<$ T $>$}!put@{put}}
+\index{put@{put}!SafeBuffer$<$ T $>$@{SafeBuffer$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}}$<$ T $>$\+::put (\begin{DoxyParamCaption}\item[{T}]{element }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & The element of type T to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+4/Safe\+Buffer.\+h\item 
+4/Safe\+Buffer.\+cpp\end{DoxyCompactItemize}

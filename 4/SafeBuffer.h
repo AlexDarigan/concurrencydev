@@ -16,6 +16,7 @@ class SafeBuffer {
         T placeholder;
 
     public:
+
         SafeBuffer(int size);
         void put(T item);
         T get();

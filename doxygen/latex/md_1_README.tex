@@ -1,0 +1,20 @@
+This project builds two different executables; the first executable \textquotesingle{}hello\+Threads\textquotesingle{} demonstrates how mutex locks are used to prevent threads from running at the same time, the second executable \char`\"{}mutual\+Ex\char`\"{} demonstrates this further by having each thread write to a shared variable, without any threads writing to an older or newer version, meaning that the final state of the shared variable will always be the same regardless of which thread touched it when.\hypertarget{md_1_README_autotoc_md1}{}\doxysection{Github Repository}\label{md_1_README_autotoc_md1}
+\href{www.github.com/AlexDarigan/concurrencydev}{\texttt{ Github Repository}}\hypertarget{md_1_README_autotoc_md2}{}\doxysection{License}\label{md_1_README_autotoc_md2}
+GPL-\/3.\+0
+
+See \mbox{[}LICENSE\mbox{]}(LICENSE) for full license text.\hypertarget{md_1_README_autotoc_md3}{}\doxysection{Author}\label{md_1_README_autotoc_md3}
+David Darigan
+
+\href{mailto:C00263218@setu.ie}{\texttt{ C00263218@setu.\+ie}}
+
+\href{https://www.linkedin.com/in/daviddarigan/}{\texttt{ Linkedin}}\hypertarget{md_1_README_autotoc_md4}{}\doxysection{Installation}\label{md_1_README_autotoc_md4}
+0.\+1 Install GCC 0.\+2 Install Make 0.\+3 Make sure you have the pthread library in your include path
+\begin{DoxyEnumerate}
+\item Open the terminal
+\item Navigate to this folder 3.\+A Run Make (or Make RELEASE) to build the resulting executable 3.\+B Run Make DEBUG to build the resulting executable with debug symbols
+\item Run the executable through the shell (./$<$exenamehere$>$)
+\end{DoxyEnumerate}\hypertarget{md_1_README_autotoc_md5}{}\doxysection{Files}\label{md_1_README_autotoc_md5}
+\hypertarget{md_1_README_autotoc_md6}{}\doxysection{TODO}\label{md_1_README_autotoc_md6}
+\begin{DoxyVerb}- Add Tests
+\end{DoxyVerb}
+ 

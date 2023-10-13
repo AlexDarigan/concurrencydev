@@ -1,13 +1,8 @@
+/// @cond DO_NOT_DOCUMENT
+// (We are copy-pasting this file so I've excluded this to prevent it appearing 8 times in doxygen)
+
 #include "Semaphore.h"
-/*! \class Semaphore
-    \brief A Semaphore Implementation
 
-   Uses C++11 features such as mutex and condition variables to implement Semaphore
-
-*/
-
-
-/*! closes thread */ 
 void Semaphore::Wait()
 {
       std::unique_lock< std::mutex > lock(m_mutex);
@@ -15,8 +10,6 @@ void Semaphore::Wait()
       --m_uiCount; 
 }
 
-
-/*! allows a thread to open */
 void Semaphore::Signal() 
 {
       std::unique_lock< std::mutex > lock(m_mutex);
@@ -27,3 +20,5 @@ void Semaphore::Signal()
 int Semaphore::getCount() {
       return m_uiCount;
 }
+
+/// @endcond

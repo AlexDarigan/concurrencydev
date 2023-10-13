@@ -6,9 +6,9 @@
 
 */
 
-
-
-
+/*!
+      Reduces the internal counter by one. Threads are blocked while the counter is 0 or less.
+*/
 void Semaphore::Wait()
 {
       std::unique_lock< std::mutex > lock(m_mutex);
@@ -27,6 +27,10 @@ bool Semaphore::Wait(const std::chrono::duration<R,P>& crRelTime)
       return true;
 }
 
+
+/*!
+      Increases the internal counter by one. Threads are not blocked while the counter is a positive non-zero number
+*/
 void Semaphore::Signal()
 {
       std::unique_lock< std::mutex > lock(m_mutex);
