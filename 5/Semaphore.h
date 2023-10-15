@@ -20,6 +20,7 @@ public:
     template< typename R,typename P >
     bool Wait(const std::chrono::duration<R,P>& crRelTime);
     void Signal();
+    int getCount();
 
 };
 
