@@ -1,3 +1,11 @@
+// Author	: David Darigan (C00263218)
+// Licence	: GPL-3.0 (See LICENSE text for the full LICENSE)
+// Git URL	: https://github.com/AlexDarigan/concurrencydev
+/*! \file main.cpp
+    \brief A Test Driver file to showcase threadsafe buffers & consumers (lab 4)
+
+*/
+
 #include "Barrier.h"
 #include "Event.h"
 #include "SafeBuffer.h"

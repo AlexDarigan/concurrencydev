@@ -1,0 +1,49 @@
+\hypertarget{reduction_8cpp}{}\doxysection{6/map-\/reduce/reduction.cpp File Reference}
+\label{reduction_8cpp}\index{6/map-\/reduce/reduction.cpp@{6/map-\/reduce/reduction.cpp}}
+
+
+A file demonstrating quicksort via paralleized reduction.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+Include dependency graph for reduction.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reduction_8cpp_ab6b513132f81d9de1ab9578e8a02dfe1}\label{reduction_8cpp_ab6b513132f81d9de1ab9578e8a02dfe1}} 
+int \mbox{\hyperlink{reduction_8cpp_ab6b513132f81d9de1ab9578e8a02dfe1}{get\+\_\+num\+\_\+threads}} (void)
+\begin{DoxyCompactList}\small\item\em ! Find out how many threads are running! \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{reduction_8cpp_a31821d51dd484c9a9ef1f0d911920b2d}\label{reduction_8cpp_a31821d51dd484c9a9ef1f0d911920b2d}} 
+float {\bfseries get\+Serial\+Sum} (vector$<$ int $>$ data)
+\item 
+\mbox{\Hypertarget{reduction_8cpp_a64e8554d4459a361ede8620d842ee3e2}\label{reduction_8cpp_a64e8554d4459a361ede8620d842ee3e2}} 
+float {\bfseries get\+Parallel\+Sum} (vector$<$ int $>$ data)
+\item 
+\mbox{\Hypertarget{reduction_8cpp_aa01f1f55a817fa34c952af9917c6f2f3}\label{reduction_8cpp_aa01f1f55a817fa34c952af9917c6f2f3}} 
+float {\bfseries get\+Tiled\+Parallelsum} (vector$<$ int $>$ data)
+\item 
+\mbox{\Hypertarget{reduction_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{reduction_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{reduction_8cpp_aa07caf85cdcdc69bc138cb903c343f52}\label{reduction_8cpp_aa07caf85cdcdc69bc138cb903c343f52}} 
+const int {\bfseries LENGTH} =2000
+\item 
+\mbox{\Hypertarget{reduction_8cpp_a761d3655563c63c0b8b291be491291dc}\label{reduction_8cpp_a761d3655563c63c0b8b291be491291dc}} 
+int {\bfseries Num\+Threads} =1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A file demonstrating quicksort via paralleized reduction. 
+

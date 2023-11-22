@@ -1,0 +1,48 @@
+\hypertarget{3_2main_8cpp}{}\doxysection{3/main.cpp File Reference}
+\label{3_2main_8cpp}\index{3/main.cpp@{3/main.cpp}}
+
+
+A Test Driver class for thread management through barriers (lab 3)  
+
+
+{\ttfamily \#include \char`\"{}Barrier.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{3_2main_8cpp_aa0dacfd0cbd49adfb6d3d5eb5e2b8f41}\label{3_2main_8cpp_aa0dacfd0cbd49adfb6d3d5eb5e2b8f41}} 
+{\footnotesize template$<$typename A , typename B $>$ }\\void {\bfseries is\+Equal} (A expected, B actual, std\+::string context)
+\item 
+void \mbox{\hyperlink{3_2main_8cpp_a96ca7eba915789dab4c11886f423c42b}{task}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBarrier}{Barrier}} $>$ barrier\+Obj)
+\item 
+\mbox{\Hypertarget{3_2main_8cpp_a7e2eac0ecfe462218ec8a15484cd4829}\label{3_2main_8cpp_a7e2eac0ecfe462218ec8a15484cd4829}} 
+void {\bfseries test\+Semaphore\+Counts} ()
+\item 
+int \mbox{\hyperlink{3_2main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Test Driver class for thread management through barriers (lab 3) 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{3_2main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{3_2main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ An array of threads
+
+$<$ Pointer to barrier object\mbox{\Hypertarget{3_2main_8cpp_a96ca7eba915789dab4c11886f423c42b}\label{3_2main_8cpp_a96ca7eba915789dab4c11886f423c42b}} 
+\index{main.cpp@{main.cpp}!task@{task}}
+\index{task@{task}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{task()}{task()}}
+{\footnotesize\ttfamily void task (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBarrier}{Barrier}} $>$}]{barrier\+Obj }\end{DoxyParamCaption})}
+
+displays the first function in the barrier being executed 

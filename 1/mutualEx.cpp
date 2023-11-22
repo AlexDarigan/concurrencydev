@@ -1,4 +1,11 @@
-// Author: David Darigan
+// Author	: David Darigan (C00263218)
+// Licence	: GPL-3.0 (See LICENSE text for the full LICENSE)
+// Git URL	: https://github.com/AlexDarigan/concurrencydev 
+// Purpose: Test Driver for showcasing Threaded Code with Semaphores
+/*! \file mutualEx.cpp
+    \brief A Test Driver class for showcasing threaded code with Semaphores and Mututal Exclusion
+
+*/
 
 #include "Semaphore.h"
 #include <iostream>

@@ -1,0 +1,57 @@
+\hypertarget{5_2main_8cpp}{}\doxysection{5/main.cpp File Reference}
+\label{5_2main_8cpp}\index{5/main.cpp@{5/main.cpp}}
+
+
+A Test Driver class about the Dining Philosopher\textquotesingle{}s problem which indicates how to use mutual exclusion without starvation (lab 5)  
+
+
+{\ttfamily \#include \char`\"{}Semaphore.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a1203c5e7c4716e863dc085f2ea69815e}\label{5_2main_8cpp_a1203c5e7c4716e863dc085f2ea69815e}} 
+std\+::vector$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ {\bfseries forks} (COUNT)
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a995feefa383b82265e681a3fe8c012c2}\label{5_2main_8cpp_a995feefa383b82265e681a3fe8c012c2}} 
+void {\bfseries think} (int my\+ID)
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a21a9defcc14025ebcaa9484d47622b9d}\label{5_2main_8cpp_a21a9defcc14025ebcaa9484d47622b9d}} 
+void {\bfseries get\+\_\+forks} (int phil\+ID)
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a4cec90aab433a1e4df09b9b6662d5c3e}\label{5_2main_8cpp_a4cec90aab433a1e4df09b9b6662d5c3e}} 
+void {\bfseries put\+\_\+forks} (int phil\+ID)
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a228fa031b8deb86a9df2eea2892c3241}\label{5_2main_8cpp_a228fa031b8deb86a9df2eea2892c3241}} 
+void {\bfseries eat} (int my\+ID)
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a734fa487b98c7efb8f2ca9635f81e91d}\label{5_2main_8cpp_a734fa487b98c7efb8f2ca9635f81e91d}} 
+void {\bfseries philosopher} (int id, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSemaphore}{Semaphore}} $>$ forklifter)
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{5_2main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a308572e3937ef7742e8cc93025faf712}\label{5_2main_8cpp_a308572e3937ef7742e8cc93025faf712}} 
+const int {\bfseries COUNT} = 5
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a5a1bc6e8c62cf965547cd9bba4da2448}\label{5_2main_8cpp_a5a1bc6e8c62cf965547cd9bba4da2448}} 
+const int {\bfseries THINKTIME} =3
+\item 
+\mbox{\Hypertarget{5_2main_8cpp_a92e894dc749f0caa8232e432965090af}\label{5_2main_8cpp_a92e894dc749f0caa8232e432965090af}} 
+const int {\bfseries EATTIME} =5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Test Driver class about the Dining Philosopher\textquotesingle{}s problem which indicates how to use mutual exclusion without starvation (lab 5) 
+

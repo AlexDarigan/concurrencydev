@@ -1,3 +1,11 @@
+// Author	: David Darigan (C00263218)
+// Licence	: GPL-3.0 (See LICENSE text for the full LICENSE)
+// Git URL	: https://github.com/AlexDarigan/concurrencydev
+/*! \file main.cpp
+    \brief A Test Driver class about the Dining Philosopher's problem which indicates how to use mutual exclusion without starvation (lab 5)
+
+*/
+
 #include "Semaphore.h"
 #include <iostream>
 #include <thread>

@@ -1,0 +1,60 @@
+\hypertarget{4_2main_8cpp}{}\doxysection{4/main.cpp File Reference}
+\label{4_2main_8cpp}\index{4/main.cpp@{4/main.cpp}}
+
+
+A Test Driver file to showcase threadsafe buffers \& consumers (lab 4)  
+
+
+{\ttfamily \#include \char`\"{}Barrier.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Safe\+Buffer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}semaphore.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{4_2main_8cpp_a9cb32274d93e28d22244354359bb612d}\label{4_2main_8cpp_a9cb32274d93e28d22244354359bb612d}} 
+void {\bfseries add\+Value} (int v)
+\item 
+\mbox{\Hypertarget{4_2main_8cpp_af036a2fce3faacc2e34da767c4b19c0c}\label{4_2main_8cpp_af036a2fce3faacc2e34da767c4b19c0c}} 
+void {\bfseries producer} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}}$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$$>$$>$ the\+Buffer, int num\+Loops)
+\item 
+\mbox{\Hypertarget{4_2main_8cpp_adf559bba569b893050b45c5816644446}\label{4_2main_8cpp_adf559bba569b893050b45c5816644446}} 
+void {\bfseries consumer} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}}$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$$>$$>$ the\+Buffer, int num\+Loops)
+\item 
+\mbox{\Hypertarget{4_2main_8cpp_a4f12de1a736eeb6eba8ecd04a19bb242}\label{4_2main_8cpp_a4f12de1a736eeb6eba8ecd04a19bb242}} 
+void {\bfseries update\+Task} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSafeBuffer}{Safe\+Buffer}}$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEvent}{Event}} $>$$>$$>$ buffer, int loops)
+\item 
+int \mbox{\hyperlink{4_2main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{4_2main_8cpp_aab938108caad0d0e47d6885b5ba2d23a}\label{4_2main_8cpp_aab938108caad0d0e47d6885b5ba2d23a}} 
+const int {\bfseries size} =20
+\item 
+\mbox{\Hypertarget{4_2main_8cpp_a2d5b01367ae1267dfac47c7875aac5e4}\label{4_2main_8cpp_a2d5b01367ae1267dfac47c7875aac5e4}} 
+int {\bfseries shared\+Variable} = 0
+\item 
+\mbox{\Hypertarget{4_2main_8cpp_aed4cfe1e847b3e5577357187eacf7b2f}\label{4_2main_8cpp_aed4cfe1e847b3e5577357187eacf7b2f}} 
+\mbox{\hyperlink{classSemaphore}{Semaphore}} {\bfseries mutex}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Test Driver file to showcase threadsafe buffers \& consumers (lab 4) 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{4_2main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{4_2main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+$<$ Launch the threads ~\newline

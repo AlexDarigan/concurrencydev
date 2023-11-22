@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7ebarrier_27',['~Barrier',['../classBarrier.html#a401f40e73302009b305904ffc7825304',1,'Barrier']]]
+  ['safebuffer_44',['SafeBuffer',['../classSafeBuffer.html#a06e2a9f4127eb2caf672005575a1b6cc',1,'SafeBuffer']]],
+  ['signal_45',['Signal',['../classSemaphore.html#a86f92f738b4486439b296d8e235895f2',1,'Semaphore']]]
 ];

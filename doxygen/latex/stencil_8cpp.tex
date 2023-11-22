@@ -1,0 +1,45 @@
+\hypertarget{stencil_8cpp}{}\doxysection{6/stencil/stencil.cpp File Reference}
+\label{stencil_8cpp}\index{6/stencil/stencil.cpp@{6/stencil/stencil.cpp}}
+
+
+A file demonstrating stencil cpp patterns using threads.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$complex$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for stencil.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stencil_8cpp_a16cd13f0a990612823638d179af32bdb}\label{stencil_8cpp_a16cd13f0a990612823638d179af32bdb}} 
+int {\bfseries calc\+Neighbours} (vector$<$ float $>$ const \&in, int index, vector$<$ float $>$ \&out)
+\item 
+\mbox{\Hypertarget{stencil_8cpp_a37439b563a5dae2d097c1f8ac30d17c5}\label{stencil_8cpp_a37439b563a5dae2d097c1f8ac30d17c5}} 
+void {\bfseries stencil} (vector$<$ float $>$ const \&in, vector$<$ float $>$ \&out, function$<$ float(vector$<$ float $>$) $>$ f, int size)
+\item 
+\mbox{\Hypertarget{stencil_8cpp_a6d6a4c1769d6dd5c00d3c0fb296988fa}\label{stencil_8cpp_a6d6a4c1769d6dd5c00d3c0fb296988fa}} 
+float {\bfseries get\+New\+Value} (vector$<$ float $>$ current\+Values)
+\item 
+\mbox{\Hypertarget{stencil_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{stencil_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stencil_8cpp_a589b8b9bfdf714f736059845d568b597}\label{stencil_8cpp_a589b8b9bfdf714f736059845d568b597}} 
+const int {\bfseries DIM} =1000
+\item 
+\mbox{\Hypertarget{stencil_8cpp_af08413a3ee12cf78b0ddeea71e2648b3}\label{stencil_8cpp_af08413a3ee12cf78b0ddeea71e2648b3}} 
+const int {\bfseries SIZE} =4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A file demonstrating stencil cpp patterns using threads. 
+
