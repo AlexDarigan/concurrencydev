@@ -4,12 +4,18 @@
 #include <iostream>
 #include <thread>
 #include <vector>
+#include "semaphore.h"
 
 static const int num_threads = 10;
 const int size=20;
 int sharedVariable = 0;
+Semaphore mutex;
 
-
+void addValue(int v) {
+  mutex.Wait();
+  sharedVariable += v;
+  mutex.Signal();
+}
 
 /*! \fn producer
     \brief Creates events and adds them to buffer
@@ -33,15 +39,9 @@ void consumer(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> theBuffer, int
     //Produce event and add to buffer
     std::shared_ptr<Event> e = theBuffer->get();
     int num = e->consume();
-    std::cout << num << std::endl;
-    sharedVariable += num;
+    addValue(num);
   }
 }
-
-// void updateTask(std::shared_ptr<Barrier> aBarrier, int loops) {
-//   producer(buffer, loops);
-//   consumer(buffer, loops);
-// }
 
 void updateTask(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> buffer, int loops) {
   producer(buffer, loops);
@@ -50,7 +50,7 @@ void updateTask(std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> buffer, int 
 
 int main(void){
 
-
+  mutex.Signal();
   std::shared_ptr <Barrier> aBarrier = std::make_shared<Barrier>();
   std::vector<std::thread> vt(num_threads);
   std::shared_ptr<SafeBuffer<std::shared_ptr<Event>>> aBuffer(new SafeBuffer<std::shared_ptr<Event>>(size));
@@ -60,7 +60,6 @@ int main(void){
   /**< Launch the threads  */
   int i=0;
   for(std::thread& t: vt){
-    //t=std::thread(updateTask,aBarrier,10);
     t=std::thread(updateTask, aBuffer, 10);
   }
   /**< Join the threads with the main thread */

@@ -18,9 +18,15 @@ private:
   int threadNum;
   bool condition;
   std::shared_ptr<Semaphore> mutex;
+<<<<<<< Updated upstream
   std::shared_ptr<Semaphore> entry;
   std::shared_ptr<Semaphore> exit;
 
+=======
+  std::shared_ptr<Semaphore> barrier1;
+  std::shared_ptr<Semaphore> entry;
+  std::shared_ptr<Semaphore> exit;
+>>>>>>> Stashed changes
 
 public:
 
