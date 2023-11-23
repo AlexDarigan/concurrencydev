@@ -1,6 +1,8 @@
 /// @cond DO_NOT_DOCUMENT
 
-// Author: David Darigan
+// Author: Joseph Kehoe
+// Edited by: David Darigan (C00263218)
+// Last Modified: Nov 23 2023
 
 #include "Semaphore.h"
 #include <iostream>

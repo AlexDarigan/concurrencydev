@@ -1,4 +1,6 @@
-// Author: David Darigan
+// Author: Joseph Kehoe
+// Edited by: David Darigan (C00263218)
+// Last Modified: Nov 23 2023
 
 #include "Barrier.h"
 

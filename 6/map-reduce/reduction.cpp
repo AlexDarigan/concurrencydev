@@ -1,5 +1,7 @@
 // reduction.cpp --- 
-// Author	: David Darigan (C00263218)
+// Author: Joseph Kehoe
+// Edited by: David Darigan (C00263218)
+// Last Modified: Nov 23 2023
 // Licence	: GPL-3.0 (See LICENSE text for the full LICENSE)
 // Git URL	: https://github.com/AlexDarigan/concurrencydev
 /*! \file reduction.cpp
